@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% block title %}My Content{% endblock title %}
+{% load static %}
+{% block content %}
+<div id="home" class="banner-area section-padding">
+    <div class="bg-overlay black"></div>
+    <div class="containter">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="welcome-text">
+                    <div class="name-area wow fadeInDown" data-wow-delay="0.2s">Hello,Learner</div>
+                    <h1 class="wow fadeInDown" data-wow-delay="0.4s">Create Innovative future with us</h1>
+                    <a href="about">Learn more</a>
+                    <a href="contact">Get in touch</a><br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block body %}
+<div id="services" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header text-center">
+                    <h2>Service's</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            {% for service in services %}
+
+                <div class="col-md-4 col-sm-4">
+                    <div class="single-service wow fadeInDown" data-wow-delay="0.2s">
+                        <i class="icon icon-wallet"></i>
+                        <h2>{{ service.name }}</h2>
+                        <p>{{ service.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{#  Post's Upload Section #}
+<div id="portfolio" class="portfolio-area section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header">
+                    <h2>Post's Upload</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            
+            {% for work in works %}
+                <div class="col-md-3 col-sm-3 col-xs-12 no-padding">
+                    <div class="gallery-items">
+                        <a class="view img" href="{{ work.image.url }}">
+                            <img src="{{ work.image.url }}" alt="work image">
+                        </a>
+                        
+
+                        <div class="gallery-text">
+                            <h2>{{ work.title }}</h2>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{# Career Section #}
+<div id="portfolio" class="portfolio-area section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header">
+                    <h2>Career Guidance </h2>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h2>There are a few things to point out here.</h2><br><br>
+            <span><b>Firstly, having a computer science (CS) degree doesn’t necessarily make you a better
+                programmer. I’ve met and worked with a lot of developers over the years—some with
+                CS degrees and some without. And I never found a pattern to identify a better
+                programmer based purely on a CS degree.</b></span><br><br>
+
+            <span><b>In my experience, having a CS degree doesn’t guarantee you’ll be a better programmer
+                than someone without a degree.</b></span><br><br>
+
+            <span><b>Secondly, having been in numerous interviews as both an interviewer and interviewee,
+                your education and qualifications bear nowhere near as much weight as the skills and
+                experience you bring to the table. If you can demonstrate excellent skills in software
+                development you’ll have a big advantage over someone with a CS degree but no
+                practical experience.</b></span><br><br>
+
+            <span><b>After all, you’re being hired for what you can do for the company, not your
+                qualifications.That being said, if you don’t have a CS degree and you’re up against someone who has
+                one as well as practical experience, then all else being equal they may be the preferred
+                applicant. </b></span>
+
+                <span><b>You may even come across companies that insist on all applicants having a CS degree.
+                    But that’s getting rarer and rarer these days, and with good reason. By ignoring anyone
+                    without a CS degree, they’re probably missing out on a large pool of great programmers.</b></span><br><br>
+    
+                <span><b>Bill Gates and Mark Zuckerberg are just two examples of programmers who achieved
+                    great success without a CS degree.</b></span><br><br>
+    
+                <span><b>Over the past 35-odd years I’ve seen numerous people without degrees get jobs as
+                    software developers. In almost all cases it was the skills and practical experience they
+                    bought to the table that got them the position.
+                    </b></span><br><br>
+    
+                <span><b>The bottom line is, if you have excellent software development techniques and can
+                    demonstrate these, it doesn't matter if you have a degree or not.
+                     </b></span>
+            </div>
+
+{# Internship Section #}
+<div id="portfolio" class="portfolio-area section-padding">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="section-header">
+                    <h2>Job's</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2>1. Front-End Developer</h2><br>
+            <span>A front-end developer focuses on the “front”-facing portions of websites and web applications, which is what users will see and interact with. This can include things such as buttons on the page, interactable objects, scrolling, and text color. Front-end developers often work with HTML, CSS, and JavaScript to ensure the app or site is working as intended. They also make sure the site is easy to read and navigate.</span><br><br>
+            <h2>2. Back End Developer</h2><br>
+            <span>In contrast to front-end developers, back-end developers focus on the server side. They make sure that the website or application works as intended, keeps running with little to no downtime, has no bugs or glitches, and follows through on intended actions. They work with databases, back-end logic, APIs, and more.</span><br><br>
+            <h2>3. Full Stack Developer</h2><br>
+            <span>Full-stack developers are more flexible and can work the front and back ends of websites and applications. They often work in a variety of niches and have many skills that allow them to seamlessly transition from one area of the website or app to another. They might do graphic design work, ensure a build is structurally sound, and/or write code to support the development of a project.</span><br><br>
+            <h2>4. Mobile Developer</h2><br>
+            <span>Mobile developers specialize in mobile app or web development, focusing on building for Android, iOS, and Windows platforms for Google, Apple, and Microsoft. The functionality of mobile websites and applications differs from that of computers and requires a different set of programming languages and UX/UI design knowledge.</span><br><br>
+            <h2>5. Web Developer</h2><br>
+            <span>Just as a mobile developer has to understand different nuances of mobile platforms, so do web developers. Web developers often specialize in building websites using JavaScript, HTML, CSS, and more. Web developers need technical skills, but also creative and visual skills to ensure the website looks good and functions properly, with intuitive interactions.</span><br><br>
+            <h2>6. Software Developer</h2><br>
+            <span>A software developer focuses on creating computer applications that allow users to perform certain tasks. Software development can range from a simple calculator app to a large-scale eCommerce application that sees millions of users interacting with it each week.</span><br><br>
+            <h2>7. Game Developer</h2><br>
+            <span>A Game developers work specifically on video games, which take programming languages and computer programs to create visually appealing and interactive projects. They can work on video games for console, PC, and mobile platforms, and can work on anything from missions to levels to characters, and more.</span><br><br>
+            <h2>8. DevOps Developer</h2><br>
+            <span>DevOps is a combination of software development and IT. DevOps engineers work to unify and automate processes that are crucial for applications to run properly. DevOps developers help to ensure that an organization can keep delivering apps and services without interruption, and in increasing volume.</span><br><br>
+            <h2>9. Security Software Developer</h2><br>
+            <span>A security software developer works directly with software development teams. They create new technologies and update programs to ensure that security systems are up-to-date and that no breaches can occur within new code and applications. Cybersecurity is a good career because these professionals are integral to any organization.</span><br>
+            <br><br>
+            <div class="alert alert-danger" role="alert">
+            <b> If You Want To Prepare Any Course Or Programming Languages With Internship programs</b>
+            </div>
+            <h6>You Should Registration With Our Internship Program</h6><a href="internshipdetails"><button type="button" class="btn btn-dark">Click Here </button></a>
+        </div>
+        
+        
+{% endblock body %}

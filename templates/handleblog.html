@@ -1,0 +1,57 @@
+{% extends 'base.html' %} 
+{% block title %} Blog{% endblock title %}
+{% block content %}
+    <div id="home" class="banner-area section-padding">
+        <div class="bg-overlay black"></div>
+        <div class="containter">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="welcome-text">
+                        <div class="name-area wow fadeInDown" data-wow-delay="0.2s">This Is Our Blog's</div>
+                        <h1 class="wow fadeInDown" data-wow-delay="0.4s">Create Innovative future with us</h1>
+                        <a href="about">Learn more</a>
+                        <a href="contact">Get in touch</a><br><br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {% endblock %}
+
+{% block body %} 
+{% load static %}
+<br><br><br>
+<section id="services" class="services">
+  
+  <div class="container-fluid">
+    <div class="section-title">
+      <div class="col-md-12">
+        <div class="section-header">
+            <h2>Welcome to Our Blog</h2>
+        </div>
+    </div>
+      <br><br><br>
+     </div>
+    {% for post in posts reversed %}
+<div class="container bg-dark">
+  <div class="card" style="margin-left: 95px; margin-top: 25px; margin-right: 95px; padding: 35px;" >
+    <div class="col-lg-4" data-aos="fade-right">
+      <img src="{{post.img.url}}" class="img-fluid" alt="no-image">
+    </div>
+      <hr/>
+      <p style ="font-family: Arial, Helvetica, sans-serif;"> <b> Title:-</b>{{post.title}}</p>
+             
+      <p style ="font-family: Arial, Helvetica, sans-serif;"> <b> Description:-</b>{{post.description}}</p>
+      
+      <p style ="font-family: Arial, Helvetica, sans-serif;"><b> Name:-</b>{{post.authname}}</p>
+      
+      <!-- <p style ="font-family: Arial, Helvetica, sans-serif;"> <b>Time:-</b>{post.timeStamp}}</p> -->
+      
+    </div>
+    
+  </div>
+  {% endfor %}
+
+
+{% endblock body %}
