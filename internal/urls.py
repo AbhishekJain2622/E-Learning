@@ -3,8 +3,8 @@ from . import views
 
 urlpatterns = [
     path('',views.home,name='home'),
-    path('about',views.about,name='about'),
-    path('contact',views.contact,name='contact'),
+    path('about/',views.about,name='about'),
+    path('contact/',views.contact,name='contact'),
     path('blog',views.handleblog,name='handleblog'),
     path('success',views.success,name='success'),
     path('internshipdetails',views.internshipdetails,name='internshipdetails'),
